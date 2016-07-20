@@ -23,7 +23,9 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/private', (req, res, next) => {
-  res.render('private');
+  res.render('private', {
+    user: req.user
+  });
 });
 
 app.get('/auth/facebook',passport.authenticate('facebook'));

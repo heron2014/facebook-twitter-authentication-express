@@ -12,7 +12,7 @@ Mongoose.connection.on('error', error => {
 //Create a Schema that defines the structure for storing user data
 const myUser = new Mongoose.Schema({
   profileId: String,
-  fullname: String,
+  fullName: String,
   profilePic: String
 });
 

@@ -11,6 +11,7 @@ let findOne = profileID => {
 
 //create a new user
 let createNewUser = profile => {
+
   return new Promise((resolve, reject) => {
     let newUser = new db.userModel({
       profileId: profile.id,
@@ -22,6 +23,7 @@ let createNewUser = profile => {
       if (error) {
         reject(error);
       } else {
+        console.log('new user',newUser);
         resolve(newUser)
       }
     })

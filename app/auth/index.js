@@ -31,7 +31,7 @@ module.exports = () => {
           //create a new user and return
           h.createNewUser(profile)
             .then(newUser => done(null, newUser))
-            .catch(error => console.log('Error when creating new user'));
+            .catch(error => console.log('Error when creating new user', error));
         }
       });
   }
