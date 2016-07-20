@@ -20,6 +20,6 @@ const myUser = new Mongoose.Schema({
 let userModel = Mongoose.model('myUser', myUser);
 
 module.exports = {
-  Mongoose: Mongoose
+  Mongoose: Mongoose,
   userModel: userModel
 }

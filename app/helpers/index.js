@@ -11,7 +11,7 @@ let findOne = profileID => {
 
 //create a new user
 let createNewUser = profile => {
-  rerurn new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     let newUser = new db.userModel({
       profileId: profile.id,
       fullName: profile.displayName,
