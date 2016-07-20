@@ -33,5 +33,10 @@ app.get('/auth/facebook/callback',passport.authenticate('facebook', { failureRed
   res.redirect('/private');
 });
 
+app.get('/auth/twitter',passport.authenticate('twitter'));
+app.get('/auth/twitter/callback',passport.authenticate('twitter', { failureRedirect: '/login' }),(req, res, next) => {
+  res.redirect('/private');
+});
+
 
 app.listen(app.get('port'), () => console.log('Server is listenning on ',app.get('port')));
