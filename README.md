@@ -4,20 +4,8 @@ Facebook, Twitter authentication in Express, remote db and distiquish between pr
 
 ### How to run this project:
 
-First create your app in the [Facebook Developer Platform](http://developers.facebook.com)
- - make sure you add valid auth redirect callback, like so (Facebook Login tab)
- ![auth-callback](images/auth-callback.png)
- - make sure you add platform with your domain address, in development as (Settings/Basic tab):
- ![basic-add](images/basic-add-platform.png)
 
-Copy clientID and clientSecret from Dashboard Tab and paste to your ```development.json``` (make sure this file is in .gitingore)
-
-Second create your app in [Twitter Developer Platform](https://apps.twitter.com)
-- the process is exactly the same as Facebook, the only difference is that you can't use localhost as valid url, replace localhost as on th picture below:
-
-![twitter-app](images/twitter-create-app.png)
-
-Copy consumerKey and consumerSecret from KEys and Access Token Tab and paste to your ```development.json```
+##### Create the following file:
 
 Create new json file called ```development.json``` in ```config``` folder and paste this code below:
 
@@ -42,10 +30,30 @@ Create new json file called ```development.json``` in ```config``` folder and pa
 
 ```
 
-Replace relevant information : keys from Facebook and Twitter.
+Replace relevant information : keys from Facebook and Twitter and your remote database information (Explanation below)
+
+##### Create new apps in Facebook and Twitter
+
+First create your app in the [Facebook Developer Platform](http://developers.facebook.com)
+ - make sure you add valid auth redirect callback, like so (Facebook Login tab)
+ ![auth-callback](images/auth-callback.png)
+ - make sure you add platform with your domain address, in development as (Settings/Basic tab):
+ ![basic-add](images/basic-add-platform.png)
+
+Copy clientID and clientSecret from Dashboard Tab and paste to your ```development.json``` (make sure this file is in .gitingore)
+
+Second create your app in [Twitter Developer Platform](https://apps.twitter.com)
+- the process is exactly the same as Facebook, the only difference is that you can't use localhost as valid url, replace localhost as on th picture below:
+
+![twitter-app](images/twitter-create-app.png)
+
+Copy consumerKey and consumerSecret from Keys and Access Token Tab and paste to your ```development.json```
 
 
-Third step - create remote database in [mongolab](https://mlab.com/).
+##### Create remote database
+
+Create remote database in [mongolab](https://mlab.com/).
+
 - crate new database
 - pick amazon services
 - check sanbox free
@@ -58,6 +66,9 @@ mongodb://<dbuser>:<dbuserpassword>@ds888888.mlab.com:99999/someNameOfYourDataba
 ```
 
 This url is located when you click on your new created database , just above the Collections table.
+
+
+##### Install dependencies:
 
 Run ```npm install```
 
